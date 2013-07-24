@@ -17,7 +17,6 @@
         <property Id="15f8285f-aa4f-43c7-b6e8-916cfc19c9d6" definitionId="6f1b4d42-33f8-41b0-a013-57013927d546" definitionName="ProjectNameCode" rawValue="Code" />
       </properties>
       <references>
-        <reference Id="6d141b6f-a880-44e3-b5fe-e3344775ce23" value="ServiceMatrix Guidance" kind="NuPattern.Runtime.References.GuidanceReference" />
         <reference Id="eccba612-ccf7-4804-b469-e7653917c572" value="solution://root/Solution Items/Endpoints.endpoints" kind="NuPattern.Runtime.References.SolutionArtifactLinkReference" tag="{&#xD;&#xA;  &quot;Tag&quot;: &quot;&quot;,&#xD;&#xA;  &quot;TargetFileName&quot;: &quot;Endpoints.endpoints&quot;,&#xD;&#xA;  &quot;SyncNames&quot;: false,&#xD;&#xA;  &quot;Id&quot;: &quot;535c0bab-96ae-4925-bf1e-bbdeb29d37fd&quot;&#xD;&#xA;}" />
       </references>
       <views>
