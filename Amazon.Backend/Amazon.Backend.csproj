@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDE2FF06-8D2E-4A88-B358-A5E179038EA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Amazon.Backend</RootNamespace>
+    <AssemblyName>Amazon.Backend</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NServiceBus">
+      <HintPath>..\packages\NServiceBus.Interfaces.4.0.0-rc0001\lib\net40\NServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\packages\NServiceBus.4.0.0-rc0001\lib\net40\NServiceBus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Host">
+      <HintPath>..\packages\NServiceBus.Host.4.0.0-rc0001\lib\net40\NServiceBus.Host.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Amazon.Code\Infrastructure\Sales\SubmitOrderProcessor.cs">
+      <Link>Infrastructure\SubmitOrderProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\Amazon.Code\Sales\SubmitOrderProcessor.cs">
+      <Link>Sales\SubmitOrderProcessor.cs</Link>
+    </Compile>
+    <Compile Include="EndpointConfig.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <ItemGuid>1dd6b8d1-c169-40fa-886f-5edd807e50bc</ItemGuid>
+    </Compile>
+    <Compile Include="Infrastructure\MessageConventions.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <ItemGuid>309ae29f-d80a-45fe-ad93-19d19a1ab25e</ItemGuid>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Infrastructure\INServiceBusComponent.cs" />
+    <Compile Include="TransportConfig.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <ItemGuid>697636c8-fe4d-404c-bad5-5f7b2e8de7b8</ItemGuid>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\MasterNodeConfig.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>027b9058-edfc-462e-b58f-4823202ea576</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\MessageForwardingInCaseOfFaultConfig.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>636df90b-4aa4-47c4-a306-b2cb3390399f</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\TransportConfig.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>0bcf978f-6e93-45d1-a6b1-02b996314bd0</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\UnicastBusConfig.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>4529ec95-a395-4b34-bb7e-3a1fba74da73</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\TransportConnectionString.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>3d8ddcc8-51c6-407f-b69e-d3581fc7a28c</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\SecondLevelRetriesConfig.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>41b84cad-a79c-46cf-b901-dcea025dc2f4</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <ItemGuid>3a056bdd-e2f9-48e6-ba55-c95f83713508</ItemGuid>
+    </None>
+    <Content Include="Infrastructure\Logging.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>be81b0da-2780-4356-a81e-cf96ccea2453</ItemGuid>
+    </Content>
+    <None Include="packages.config">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f288f79c6-683e-44f0-990c-92a7164b39be</SourceModelReference>
+      <ItemGuid>8c5b4d20-a26c-4157-8d14-8626854a65b8</ItemGuid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Amazon.Contracts\Amazon.Contracts.csproj">
+      <Project>{8D7FEAA4-3D70-481D-9FF1-9ECDD14D7464}</Project>
+      <Name>Amazon.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Amazon.InternalMessages\Amazon.InternalMessages.csproj">
+      <Project>{D4DDF65C-DA30-4810-A196-59F91D457E6C}</Project>
+      <Name>Amazon.InternalMessages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

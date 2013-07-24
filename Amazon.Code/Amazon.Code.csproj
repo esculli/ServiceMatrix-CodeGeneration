@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4267EDF-AB44-447A-87D5-401A832E8FB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Amazon.Code</RootNamespace>
+    <AssemblyName>Amazon.Code</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Emailing\OrderSubmittedProcessor.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f1ee90580-7c3c-4a2d-9d98-1422935377f9</SourceModelReference>
+      <ItemGuid>acaa4059-8914-441e-adfc-291ff495fcee</ItemGuid>
+    </Compile>
+    <Compile Include="Infrastructure\Emailing\OrderSubmittedProcessor.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f1ee90580-7c3c-4a2d-9d98-1422935377f9</SourceModelReference>
+      <ItemGuid>33e27f5b-cf57-40aa-a12a-4f9676008770</ItemGuid>
+    </Compile>
+    <Compile Include="Infrastructure\Sales\SubmitOrderProcessor.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f7d1be79c-2501-499b-b486-79eae3a43f9f</SourceModelReference>
+      <ItemGuid>2026098f-442e-4df1-9e66-1a1e983581d2</ItemGuid>
+    </Compile>
+    <Compile Include="Infrastructure\Sales\SubmitOrderSender.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f28745106-33ff-4608-9882-0f6315d911a1</SourceModelReference>
+      <ItemGuid>772f2cd7-b791-4c26-8fc1-9aaca4f994b1</ItemGuid>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales\SubmitOrderProcessor.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252f7d1be79c-2501-499b-b486-79eae3a43f9f</SourceModelReference>
+      <ItemGuid>da515468-77f9-413d-a93e-66e8baff6cd8</ItemGuid>
+    </Compile>
+    <Compile Include="Sales\SubmitOrderSender.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/Amazon/Element/c:\Users\Ezequiel\documents\visual studio 2012\Projects\Amazon\Amazon.slnbldr%252fce43379c-4210-4fd5-80a0-8e55587fd7d6</SourceModelReference>
+      <ItemGuid>a78c375d-2139-4568-a78b-586138c537d3</ItemGuid>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Amazon.Contracts\Amazon.Contracts.csproj">
+      <Project>{8D7FEAA4-3D70-481D-9FF1-9ECDD14D7464}</Project>
+      <Name>Amazon.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Amazon.InternalMessages\Amazon.InternalMessages.csproj">
+      <Project>{D4DDF65C-DA30-4810-A196-59F91D457E6C}</Project>
+      <Name>Amazon.InternalMessages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
